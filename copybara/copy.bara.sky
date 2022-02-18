@@ -1,5 +1,5 @@
-sourceUrl = "https://github.com/A-queous/Copybara-ITERATIVE-Priv.git"
-destinationUrl = "https://github.com/A-queous/Copybara-ITERATIVE-Pub.git"
+sourceUrl = "git@github.com:A-queous/Copybara-ITERATIVE-Priv.git"
+destinationUrl = "git@github.com:A-queous/Copybara-ITERATIVE-Pub.git"
 
 core.workflow(
     name = "default",
