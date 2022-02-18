@@ -22,4 +22,4 @@ jobs:
           destination_repo: A-queous/Copybara-ITERATIVE-Pub
           custom_config: copybara/copy.bara.sky
           workflow: "default"
-          copybara_options: "--init-history"
+          copybara_options: "--init-history --force"
