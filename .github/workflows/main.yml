@@ -16,7 +16,7 @@ jobs:
 
       - uses: olivr/copybara-action@a0bb6a37362014a57421a6c8dec43fa1908dda06
         with:
-          ssh_key: ${{ secrets.SOT }}
+          ssh_key: ${{ secrets.PUB_SSH }}
 #          access_token: ${{ secrets.GH_TOKEN }}
           sot_repo: A-queous/Copybara-ITERATIVE-Priv
           destination_repo: A-queous/Copybara-ITERATIVE-Pub
