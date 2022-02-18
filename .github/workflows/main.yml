@@ -20,3 +20,5 @@ jobs:
           access_token: ${{ secrets.GH_TOKEN }}
           sot_repo: A-queous/Copybara-ITERATIVE-Priv
           destination_repo: A-queous/Copybara-ITERATIVE-Pub
+          custom_config: copybara/copy.bara.sky
+          workflow: "default"
