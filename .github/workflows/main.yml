@@ -16,10 +16,11 @@ jobs:
 
       - uses: olivr/copybara-action@a0bb6a37362014a57421a6c8dec43fa1908dda06
         with:
-#          ssh_key: ${{ secrets.SOT }}
-          access_token: ${{ secrets.GH_TOKEN }}
+          ssh_key: ${{ secrets.SOT }}
+#          access_token: ${{ secrets.GH_TOKEN }}
           sot_repo: A-queous/Copybara-ITERATIVE-Priv
           destination_repo: A-queous/Copybara-ITERATIVE-Pub
           custom_config: copybara/copy.bara.sky
           workflow: "default"
           copybara_options: "--init-history --force"
+          sot_branch: "main"
