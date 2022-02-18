@@ -1,0 +1,21 @@
+sourceUrl = "https://github.com/A-queous/Copybara-ITERATIVE-Priv.git"
+destinationUrl = "https://github.com/A-queous/Copybara-ITERATIVE-Pub.git"
+
+core.workflow(
+    name = "default",
+    origin = git.origin(
+        url = sourceUrl,
+        ref = "main",
+    ),
+    destination = git.destination(
+        url = destinationUrl,
+        fetch = "main",
+        push = "main",
+    ),
+    mode = "ITERATIVE",
+    authoring = authoring.pass_thru("Copybara Bot <no-reply@domain.com>"),
+    transformations = [
+        metadata.restore_author("ORIGINAL_AUTHOR", search_all_changes = True),
+        metadata.expose_label("COPYBARA_INTEGRATE_REVIEW"),
+    ],
+)
