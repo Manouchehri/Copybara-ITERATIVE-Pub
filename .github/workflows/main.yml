@@ -11,12 +11,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check dir ghidra extensions
+        run: ls
+
       - uses: olivr/copybara-action@a0bb6a37362014a57421a6c8dec43fa1908dda06
         with:
           ssh_key: ${{ secrets.SOT }}
           access_token: ${{ secrets.GH_TOKEN }}
           sot_repo: A-queous/Copybara-ITERATIVE-Priv
           destination_repo: A-queous/Copybara-ITERATIVE-Pub
-          
-      - name: Check dir ghidra extensions
-        run: ls
