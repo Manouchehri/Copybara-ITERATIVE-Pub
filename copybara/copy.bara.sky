@@ -1,4 +1,4 @@
-sourceUrl = "git@github.com:A-queous/Copybara-ITERATIVE-Priv.git"
+sourceUrl = "REPLACEME"
 destinationUrl = "git@github.com:A-queous/Copybara-ITERATIVE-Pub.git"
 
 core.workflow(
