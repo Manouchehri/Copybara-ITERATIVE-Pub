@@ -20,8 +20,8 @@ jobs:
       - name: ls workspace
         run: ls ${{ github.workspace }}
         
-#       - name: Update copy.bara.sky with repo env variable values
-#         run: sed -i 's,REPLACEME,file://${{ GITHUB_WORKSPACE }}' copybara.bak.sky
+      - name: Update copy.bara.sky with repo env variable values
+        run: sed -i 's,REPLACEME,file://${{ github.workspace }}' copybara/copy.bara.sky
 
       - uses: olivr/copybara-action@a0bb6a37362014a57421a6c8dec43fa1908dda06
         with:
