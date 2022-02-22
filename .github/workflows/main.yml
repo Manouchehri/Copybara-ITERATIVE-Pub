@@ -22,6 +22,9 @@ jobs:
         
       - name: Update copy.bara.sky with repo env variable values
         run: sed -i 's,REPLACEME,file://${{ github.workspace }},' copybara/copy.bara.sky
+        
+      - name: git clone test
+        run: git clone file://${{ github.workspace }} trash_tmp
 
       - uses: olivr/copybara-action@a0bb6a37362014a57421a6c8dec43fa1908dda06
         with:
