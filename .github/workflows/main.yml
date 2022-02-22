@@ -18,7 +18,7 @@ jobs:
         run: echo ${{ github.workspace }}
         
       - name: ls workspace
-        run: ls ${{ github.workspace }}
+        run: ls -a ${{ github.workspace }}
         
       - name: Update copy.bara.sky with repo env variable values
         run: sed -i 's,REPLACEME,file://${{ github.workspace }},' copybara/copy.bara.sky
