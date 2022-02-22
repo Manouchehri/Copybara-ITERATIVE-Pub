@@ -12,13 +12,13 @@ jobs:
           fetch-depth: 0
 
       - name: Check dir ghidra extensions
-        run: ls -a
+        run: ls -r
       
       - name: Echo Workspace
-        run: echo ${{ env.GITHUB_WORKSPACE }}
+        run: echo ${{ github.workspace }}
         
       - name: ls workspace
-        run: ls ${{ env.GITHUB_WORKSPACE }}
+        run: ls ${{ github.workspace }}
         
 #       - name: Update copy.bara.sky with repo env variable values
 #         run: sed -i 's,REPLACEME,file://${{ GITHUB_WORKSPACE }}' copybara.bak.sky
