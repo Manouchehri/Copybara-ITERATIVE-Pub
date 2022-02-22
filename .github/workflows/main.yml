@@ -11,28 +11,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Check dir ghidra extensions
-        run: ls -r
-      
-      - name: Echo Workspace
-        run: echo ${{ github.workspace }}
-        
-      - name: ls workspace
-        run: ls -a ${{ github.workspace }}
-        
-#       - name: Update copy.bara.sky with repo env variable values
-#         run: sed -i 's,REPLACEME,file://${{ github.workspace }},' copybara/copy.bara.sky
-        
-      - name: git clone test
-        run: git clone file://${{ github.workspace }} trash_tmp
-
       - uses: olivr/copybara-action@a0bb6a37362014a57421a6c8dec43fa1908dda06
         with:
           ssh_key: ${{ secrets.PUB_SSH }}
-#           access_token: ${{ secrets.GH_TOKEN }}
-#           sot_repo: A-queous/Copybara-ITERATIVE-Priv
-#           destination_repo: A-queous/Copybara-ITERATIVE-Pub
           custom_config: copybara/copy.bara.sky
           workflow: "default"
-          copybara_options: "--init-history --force"
           sot_branch: "main"
