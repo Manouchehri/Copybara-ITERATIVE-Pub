@@ -20,8 +20,8 @@ jobs:
       - name: ls workspace
         run: ls -a ${{ github.workspace }}
         
-      - name: Update copy.bara.sky with repo env variable values
-        run: sed -i 's,REPLACEME,file://${{ github.workspace }},' copybara/copy.bara.sky
+#       - name: Update copy.bara.sky with repo env variable values
+#         run: sed -i 's,REPLACEME,file://${{ github.workspace }},' copybara/copy.bara.sky
         
       - name: git clone test
         run: git clone file://${{ github.workspace }} trash_tmp
